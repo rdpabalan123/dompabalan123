@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy PHP app to Azure Web App - MGPS-API
+name: Build and deploy PHP app to Azure Web App - gsdcmgps-api
 
 on:
   push:
@@ -61,15 +61,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_4603931743434F33A4836CEBCA012081 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_93BEF34FAE284FA89C861D2CD7A13567 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_BD121CDB606F4363ADD75872F139C30D }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_43C5BC3FBF314DED918740169E10A387 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_FD4549D2ACB54F399A0D594F42FAA1AA }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_87D8DCDD05CA4F60BDD44EB0279EC0D1 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'MGPS-API'
+          app-name: 'gsdcmgps-api'
           slot-name: 'Production'
           package: .
           
